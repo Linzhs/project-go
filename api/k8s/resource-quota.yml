@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: example
+spec:
+  scopes:
+    - BestEffort
+    - NotTerminating
+  hard:
+    requests.cpu: 400m
+    requests.memory: 200Mi
+    limits.cpu: 600m
+    limits.memory: 500Mi
+    requests.storagge: 500Gi # 可声明的存储总量
+
+    ssd.storageclass.storage.k8s.io/requests.storage: 300Gi # StorageClass SSD的可申请存储总量
+    standard.storageclass.storage.k8s.io/requests.storage: 1Ti
+
+    pods: 10 # 创建的对象数限制
+    replicationcontrollers: 5
+    secrets: 10
+    configmap: 10
+    persistentvolumecliam: 3
+    services: 5
+    services.locabalances: 1
+    service.nodeports: 2
+    ssd.storageclass.storage.k8s.io/persistentvolumeclaims: 2

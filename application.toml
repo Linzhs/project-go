@@ -1,0 +1,7 @@
+[server]
+name = "superserv"
+port = 8888
+
+[logger]
+driver = "stdout"
+color = true

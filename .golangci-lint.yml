@@ -59,6 +59,7 @@ linters:
     - prealloc
     - scopelint
     - bodyclose
+    - stylecheck
   fast: false
 
 linters-settings:
