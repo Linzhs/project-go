@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package helloworld;
+
+message String {
+    string value = 1;
+}
+
+service HelloService {
+    rpc Hello(String) returns (String);
+    rpc SayHello(String) returns (stream String);
+    rpc Channel(stream String) returns (stream String);
+}

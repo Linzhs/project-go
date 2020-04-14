@@ -62,7 +62,6 @@ core.*
 # go
 # vendor
 *.test
-pkg
 
 # Custom
 *.pyc
